@@ -10,7 +10,7 @@ LABEL maintainer "rjarow <github.com/rjarow>" architecture="AMD64/x86_64"  alpin
 
 ADD alpine-minirootfs-3.6.2-x86_64.tar.gz /
 
-ENV S6_OVERLAY_VERSION=v1.20.0.0
+ENV S6_OVERLAY_VERSION=v1.20.0.3
 
 RUN apk add --update --no-cache \
        bind-tools \
