@@ -6,19 +6,19 @@ ADD alpine-minirootfs-3.6.2-x86_64.tar.gz /
 ENV S6_OVERLAY_VERSION=v1.21.2.1
 
 RUN apk add --update --no-cache \
-       bind-tools \
-       ca-certificates \
-       gnupg \
-       net-tools \
-       bash \
-       curl \
-       wget \
-       unzip \
-       nano \
-       coreutils \
-       shadow \
-       tzdata\
-       && rm -rf /var/cache/apk/*
+    bind-tools \
+    ca-certificates \
+    gnupg \
+    net-tools \
+    bash \
+    curl \
+    wget \
+    unzip \
+    nano \
+    coreutils \
+    shadow \
+    tzdata\
+    && rm -rf /var/cache/apk/*
 
 RUN wget https://keybase.io/justcontainers/key.asc --no-check-certificate -O /tmp/s6-overlay-key.asc \
     && wget https://github.com/just-containers/s6-overlay/releases/download/${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz --no-check-certificate -O /tmp/s6-overlay-amd64.tar.gz \
